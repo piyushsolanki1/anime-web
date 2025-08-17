@@ -21,8 +21,8 @@ const App = () => {
     try {
       const endpoint =
         query.length > 1
-          ? `https://api.jikan.moe/v4/anime?q=${query}&limit=5`
-          : "https://api.jikan.moe/v4/top/anime?limit=5";
+          ? `https://api.jikan.moe/v4/anime?q=${query}&limit=10`
+          : "https://api.jikan.moe/v4/top/anime?limit=10";
 
       const res = await fetch(endpoint);
       if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
